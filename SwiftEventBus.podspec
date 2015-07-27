@@ -8,6 +8,9 @@ Pod::Spec.new do |s|
   s.authors = { 'César Ferreira' => 'cesar.manuel.ferreira@gmail.com' }
   s.source = { :git => 'https://github.com/cesarferreira/SwiftEventBus.git', :tag => s.version }
   s.ios.deployment_target = '8.0'
+  if s.respond_to?(:watchos)
+    s.watchos.deployment_target = '2.0'
+  end
   s.source_files = 'SwiftEventBus/SwiftEventBus.swift'
   s.requires_arc = true
 end
